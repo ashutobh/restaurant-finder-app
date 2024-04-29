@@ -20,7 +20,6 @@ const container = document.getElementById('root');
 const root = createRoot(container); 
 
 root.render(
-  <React.StrictMode>
        <Router>
       <Header/>
       <Routes>      
@@ -37,5 +36,4 @@ root.render(
         <Route path="/error" element={<Error />}></Route>   
       </Routes>
     </Router>
-  </React.StrictMode>
 );

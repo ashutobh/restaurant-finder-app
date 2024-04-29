@@ -8,6 +8,7 @@ const CreateSession = () => {
 
   const savedUser = localStorage.getItem('restaurantFinderUserId');
   const userId = JSON.parse(savedUser);
+ // alert("Session Id" + userId);
 
   useEffect(() => {
     axios
@@ -18,7 +19,14 @@ const CreateSession = () => {
       .catch((err) => console.log(err));
   }, []);
    
-  localStorage.setItem("restaurantFinderSessionId", JSON.stringify(data.sessionId));
+  if(data != null && data.statusCode == 200) {
+    //alert("restaurantFinderSessionId" + JSON.stringify(data.sessionId));
+    localStorage.setItem("restaurantFinderSessionId", JSON.stringify(data.sessionId));
+  }  else if(data != null && data.statusCode == 400) {
+    //alert(' >' + JSON.stringify(data.sessionId));
+    localStorage.setItem("restaurantFinderSessionId", JSON.stringify(data.sessionId));
+  }  
+  
   
   if(data.statusCode ==200) {
     return (
@@ -47,13 +55,15 @@ const CreateSession = () => {
       <Table striped bordered hover size="sm">
         <thead>
           <tr>
+            <th>Session Id</th>
             <th>Message</th>
           </tr>
         </thead>
   
         <tbody>
           {
-            <tr key={data.message}>
+            <tr key={data.sessionId}>
+              <td>{data.sessionId}</td>
               <td>{data.message}</td>
             </tr>
           }

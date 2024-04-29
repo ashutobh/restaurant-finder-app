@@ -9,10 +9,10 @@ const ShowSessionUser = () => {
   const [data, setData] = useState([]);
 
   const savedSession = localStorage.getItem('restaurantFinderSessionId');
-  alert("Local Storage session Id " + savedSession);
+  //alert("Local Storage session Id " + savedSession);
   
   const sessionId = JSON.parse(savedSession);
-  alert("Local Storage session Id " + sessionId);
+  //alert("Local Storage session Id " + sessionId);
 
   useEffect(() => {
     axios
@@ -29,11 +29,9 @@ const ShowSessionUser = () => {
       <Table striped bordered hover size="sm">
         <thead>
           <tr>
-          <tr>
                 <th>Email Address</th>
                  <th>First Name</th>
                  <th>Last Name</th>
-            </tr>
           </tr>
         </thead>
         <tbody>
