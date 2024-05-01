@@ -14,7 +14,7 @@ Restaurant Finder is a React application that allows groups of people to create 
 - **Show session User**: Users can see the users who have already joined the session.
 - **Join Session**: Participants can join existing sessions using a session code.
 - **Add Restaurant**: Each participant can input their restaurant preferences within the session.
-- **Termiante session**: User who has created the session can terminate it and one restuarant will be selected
+- **Terminate session**: User who has created the session can terminate it and one restuarant will be selected
 - **Show all selected restaurant**: All Restaurant will be dispalyed, those are selected in any session.
 
 ## Installation
