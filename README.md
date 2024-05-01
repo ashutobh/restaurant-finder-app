@@ -2,7 +2,7 @@
 
 Restaurant Finder is a React application that allows groups of people to create and join sessions to share their restaurant preferences. At the end of the session, one restaurant is randomly selected from the choices provided by the participants.
 
-## Prerequisites
+## Information
 1. Session details is storing in browser local storage and expected to clean the the browse local storage before starting a flow
 2. Please call the api in same orders in which they are in header to avoid run time erros, as we have user local storage
 
