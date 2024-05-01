@@ -9,11 +9,13 @@ const ShowSessionUser = () => {
   const [data, setData] = useState([]);
 
   const savedSession = localStorage.getItem('restaurantFinderSessionId');
-  //alert("Local Storage session Id " + savedSession);
-  
   const sessionId = JSON.parse(savedSession);
-  //alert("Local Storage session Id " + sessionId);
 
+  if(sessionId == null) {
+    window.location = "/sessionError"; 
+  }
+
+  
   useEffect(() => {
     axios
       .get(`http://localhost:8080/restaurant/api/v1/showAllSessionUsers/${sessionId}`)

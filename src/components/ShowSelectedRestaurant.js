@@ -8,12 +8,6 @@ const ShowSelectedRestaurant = () => {
 
   const [data, setData] = useState([]);
 
-  if(localStorage.getItem('restaurantFinderUserId') == null ) {
-    localStorage.removeItem('restaurantFinderUserId');
-  }
-  if(localStorage.getItem("restaurantFinderSessionId") == null ) {
-    localStorage.removeItem("restaurantFinderSessionId");
-  }
   useEffect(() => {
     axios
       .get(`http://localhost:8080/restaurant/api/v1/getSelectedRestaurant`)

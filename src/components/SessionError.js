@@ -2,7 +2,7 @@ import React from 'react'
 import '../App.css'
 import { Table } from 'react-bootstrap';
 
-const Error = () => {
+const SessionError = () => {
     return (
         <Table striped bordered hover size="sm">
           <thead>
@@ -14,7 +14,7 @@ const Error = () => {
           <tbody>
             {
               <tr>
-                <td>No user/session exists. Please create user/session first!</td>
+                <td>No session exists. Please create session first!</td>
               </tr>
             }
           </tbody>
@@ -22,4 +22,4 @@ const Error = () => {
       );
     };
 
-export default Error
+export default SessionError

@@ -20,6 +20,7 @@ const header = () => {
     <LinkContainer to="/addRestaurant"><Nav.Link>Add Restaurant</Nav.Link></LinkContainer>
     <LinkContainer to="/terminateActiveSession"><Nav.Link>Terminate Active Session</Nav.Link></LinkContainer>
     <LinkContainer to="/showSelectedRestaurant"><Nav.Link>Show All Selected Restaurant</Nav.Link></LinkContainer>
+    <LinkContainer to="/resetApp"><Nav.Link>Reset</Nav.Link></LinkContainer>
     </Nav>
   </Navbar.Collapse>
 </Navbar>

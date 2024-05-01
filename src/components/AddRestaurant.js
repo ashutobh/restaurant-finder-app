@@ -79,6 +79,12 @@ const AddRestaurant = () => {
 
       const savedSession = localStorage.getItem('restaurantFinderSessionId');
       const sessionId = JSON.parse(savedSession);
+
+      if(userId == null || sessionId == null) {
+        window.location = "/error"; 
+      }
+
+      
       try {
         axios
         .post(`http://localhost:8080/restaurant/api/v1/addRestaurant/${sessionId}`, {

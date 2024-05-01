@@ -25,11 +25,17 @@ Restaurant Finder is a React application that allows groups of people to create 
 
 2. cd restaurant-selector
     npm install
+   
+3. Run below command
+   npm start
 
-3. Usage
+
+## Usage
     Create a new session or join an existing session using the provided code or link.
     Participants can input their restaurant preferences.
     At the end of the session, the application will randomly select one restaurant from the choices provided.
     The selected restaurant will be displayed to all participants in the session.
-4. Technologies Used
+## Technologies Used
     React
+    JavaScript
+    HTML

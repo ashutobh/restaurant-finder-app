@@ -12,6 +12,10 @@ const TerminateActiveSession = () => {
   const savedSession = localStorage.getItem('restaurantFinderSessionId');
   const sessionId = JSON.parse(savedSession);
 
+  if (userId == null || sessionId == null) {
+    window.location = "/error";
+  }
+
   useEffect(() => {
     axios
       .post(`http://localhost:8080/restaurant/api/v1/terminateSession/${sessionId}/${userId}`)

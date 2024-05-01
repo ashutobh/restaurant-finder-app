@@ -10,6 +10,11 @@ const CreateSession = () => {
   const userId = JSON.parse(savedUser);
  // alert("Session Id" + userId);
 
+ if(userId == null) {
+  window.location = "/userError"; 
+}
+
+
   useEffect(() => {
     axios
       .post(`http://localhost:8080/restaurant/api/v1/createSession/${userId}`)
